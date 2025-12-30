@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+
+<article>
+  <h1>{{ title }}</h1>
+  <div class="article-meta">
+    Published on <time datetime="{{ date | htmlDateString }}">{{ date | dateDisplay }}</time>
+  </div>
+  {{ content | safe }}
+</article>
+
+<!-- Post Navigation -->
+<nav class="post-nav">
+  <div class="post-nav-container">
+    {%- set currentPost = page.url %}
+    {%- set allPosts = collections.posts %}
+    {%- for post in allPosts %}
+      {%- if post.url == currentPost %}
+        {%- if loop.index0 > 0 %}
+          <div class="post-nav-prev">
+            <a href="{{ allPosts[loop.index0 - 1].url }}" rel="prev">
+              <span class="nav-label">← Previous Post</span>
+              <span class="nav-title">{{ allPosts[loop.index0 - 1].data.title }}</span>
+            </a>
+          </div>
+        {%- endif %}
+        {%- if loop.index < allPosts.length %}
+          <div class="post-nav-next">
+            <a href="{{ allPosts[loop.index0 + 1].url }}" rel="next">
+              <span class="nav-label">Next Post →</span>
+              <span class="nav-title">{{ allPosts[loop.index0 + 1].data.title }}</span>
+            </a>
+          </div>
+        {%- endif %}
+      {%- endif %}
+    {%- endfor %}
+  </div>
+</nav>

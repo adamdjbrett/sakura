@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or metadata.title }}</title>
+  <meta name="description" content="{{ description or metadata.description }}">
+  <link rel="stylesheet" href="/css/sakura.css">
+  <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <a href="/" class="nav-logo">{{ metadata["logo-emoji"] }}</a>
+      </div>
+    </nav>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>&copy; {{ page.date.getFullYear() }} {{ metadata.author.name }} | 
+      Built with <a href="https://11ty.dev/">Eleventy</a> v{{ eleventy.version }}</p>
+    </footer>
+  </div>
+</body>
+</html>

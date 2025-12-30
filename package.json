@@ -1,0 +1,14 @@
+{
+  "name": "sakura-blog",
+  "version": "1.0.0",
+  "description": "An Eleventy blog using sakura.css",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  }
+}

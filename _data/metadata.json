@@ -1,0 +1,9 @@
+{
+  "title": "Sakura Blog",
+  "description": "A beautiful blog powered by Eleventy",
+  "logo-emoji": "🐦‍⬛",
+  "url": "http://localhost:8080",
+  "author": {
+    "name": "Your Name"
+  }
+}
