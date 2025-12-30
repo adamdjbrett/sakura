@@ -7,12 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
@@ -20,6 +14,31 @@ body {
   color: #3a3a3a;
   background-color: #fff;
   padding: 2rem 1rem;
+}
+
+a,
+a:visited {
+  color: #f012be;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.12em;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
+}
+
+a:visited {
+  color: #b00f94;
+}
+
+a:hover,
+a:focus {
+  color: #b00f94;
+  text-decoration-thickness: 0.18em;
+}
+
+a:focus-visible {
+  outline: 2px solid #f012be;
+  outline-offset: 3px;
+  text-decoration-thickness: 0.18em;
 }
 
 /* Typography */
@@ -56,17 +75,6 @@ h6 {
 
 p {
   margin-bottom: 1rem;
-}
-
-a {
-  color: #d946ef;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #c026d3;
-  text-decoration: underline;
 }
 
 /* Code */
@@ -211,14 +219,16 @@ nav ul {
 }
 
 nav a {
-  color: #3a3a3a;
+  color: #f012be;
   font-weight: 500;
-  transition: color 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
 }
 
 nav a:hover {
-  color: #d946ef;
-  text-decoration: none;
+  color: #b00f94;
+  text-decoration-thickness: 0.18em;
 }
 
 .nav-logo {
@@ -247,11 +257,11 @@ footer {
 }
 
 footer a {
-  color: #d946ef;
+  color: #f012be;
 }
 
 footer a:hover {
-  color: #c026d3;
+  color: #b00f94;
 }
 
 /* Images */
@@ -313,23 +323,23 @@ article h1,article h2,article h3 {
 
 .pagination a,.pagination span {
   padding: 0.5rem 1rem;
-  border: 1px solid #d946ef;
+  border: 1px solid #f012be;
   border-radius: 4px;
-  color: #d946ef;
+  color: #f012be;
   text-decoration: none;
   transition: all 0.2s;
 }
 
 .pagination a:hover {
-  background-color: #d946ef;
+  background-color: #f012be;
   color: white;
   text-decoration: none;
 }
 
 .pagination .current {
-  background-color: #d946ef;
+  background-color: #f012be;
   color: white;
-  border-color: #d946ef;
+  border-color: #f012be;
 }
 
 /* Responsive */
@@ -392,15 +402,15 @@ article h1,article h2,article h3 {
 .post-nav a {
   display: block;
   padding: 1rem;
-  border: 1px solid #d946ef;
+  border: 1px solid #f012be;
   border-radius: 4px;
-  color: #d946ef;
+  color: #f012be;
   text-decoration: none;
   transition: all 0.2s;
 }
 
 .post-nav a:hover {
-  background-color: #d946ef;
+  background-color: #f012be;
   color: white;
   text-decoration: none;
 }
